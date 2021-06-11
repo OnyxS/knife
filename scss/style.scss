@@ -11,10 +11,10 @@ $maxWidth: 1920;
 
   @media (max-width: 767px) {
     font-size: calc(
-      #{$mobSize + px} + #{$addMobSize} * ((100vw - 375px) / #{$maxWidth})
+      #{$mobSize + px} + #{$addMobSize} * ((100vw - 414px) / #{$maxWidth})
     );
     line-height: calc(
-      (#{$mobSize + px} + #{$addMobSize} * ((100vw - 375px) / #{$maxWidth})) *#{$line}
+      (#{$mobSize + px} + #{$addMobSize} * ((100vw - 414px) / #{$maxWidth})) *#{$line}
     );
   }
 
@@ -32,7 +32,7 @@ html {
   box-sizing: border-box;
   font-family: "EFN";
   color: white;
-  @include adaptiv-font(14, 9, 1.2);
+  @include adaptiv-font(14, 5, 1.2);
   font-weight: 400;
   scroll-behavior: smooth;
   @media screen and (prefers-reduced-motion: reduce) {
@@ -52,11 +52,11 @@ body {
 }
 
 h2 {
-  font-size: 36px;
+  @include adaptiv-font(36,12,1.2);
 }
 
 h3 {
-  font-size: 24px;
+  @include adaptiv-font(36,12,1.2);
 }
 
 a {
@@ -102,8 +102,19 @@ html::-webkit-scrollbar-thumb:active {
   text-align: center;
   background-color: black;
   position: relative;
+  @media(max-width:992px){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__ham{
+    display: none;
+    @media(max-width:992px){
+      display:block;
+    }
+  }
   &__title {
-    font-size: 64px;
+    @include adaptiv-font(64,24,1.2);
   }
   &__search {
     position: absolute;
@@ -111,6 +122,11 @@ html::-webkit-scrollbar-thumb:active {
     top: 30px;
     width: 40px;
     height: 40px;
+    @media(max-width:992px){
+      width:20px;
+      height:20px;
+      position:static;
+    }
   }
 }
 
@@ -156,6 +172,7 @@ html::-webkit-scrollbar-thumb:active {
       }
       &__text {
         width: 61.5%;
+        
       }
     }
     .katalog {
@@ -169,9 +186,9 @@ html::-webkit-scrollbar-thumb:active {
         margin-bottom: 245px;
         &-item {
           display: block;
-          width: 267px;
+          width: 24%;
           margin: 0 42px 55px;
-          font-size: 16px;
+          @include adaptiv-font(16,5,1.2);
           padding: 16px 19px 8px;
           background-color: #242425;
           box-shadow: 0px 4px 10px 5px #00000040;
@@ -222,8 +239,11 @@ html::-webkit-scrollbar-thumb:active {
   &-logo {
     width: 100%;
     box-shadow: 0px 4px 10px 5px #00000040;
-
+    position:relative;
     padding: 15px 0;
+    @media(max-width:992px){
+      padding:14px 0;
+    }
     &-img {
       border-radius: 100%;
       border: 1px solid black;
@@ -235,6 +255,23 @@ html::-webkit-scrollbar-thumb:active {
         width: 120px;
         height: 120px;
       }
+      @media(max-width:992px){
+        width:102px;
+        height:102px;
+        img{
+          width:102px;
+          height:102px;
+        }
+      }
+    }
+    .x-icon{
+      position:absolute;
+      top:14px;
+      right:14px;
+      display:none;
+      @media(max-width:992px){
+        display:block;
+      }
     }
   }
   .nav {
@@ -242,9 +279,13 @@ html::-webkit-scrollbar-thumb:active {
       &-block {
         display: block;
         width: 100%;
+        @include adaptiv-font(16,9,1.2);
         text-align: center;
         padding: 31px 0;
         position: relative;
+        @media(max-width:992px){
+          padding:10px 0;
+        }
 		  &:hover {
 			transform: translateY(-1px);
 			box-shadow: 0 0 10px #bebebe;
@@ -265,19 +306,89 @@ html::-webkit-scrollbar-thumb:active {
   }
   &-contact {
     margin-top: 150px;
-    font-size: 12px;
+    @include adaptiv-font(12,7,1.2);
+    @media(max-width:992px){
+      margin-top:50px;
+    }
     img {
       width: 25px;
       margin: 0 auto 20px;
+      @media(max-width:992px){
+        width:20px;
+      }
     }
     .content__contact-tel {
       display: flex;
       flex-direction: column;
       margin-bottom: 67px;
+      @media(max-width:992px){
+        margin-bottom: 40px;
+      }
     }
     .content__contact-adress {
       width: 170px;
       margin: 0 auto;
+      @media(max-width:992px){
+        width:107px;
+      }
+    }
+  }
+  .content__left-bottom{
+    &-pay{
+      
+      .content__left-pay-title{
+        padding-bottom: 86px;
+        @media(max-width:992px){
+          padding:0;
+        }
+      }
+      .flags {
+        width: 300px;
+      }
+
+      .flag {
+	      height: 100px;;
+        width: 150px;
+        position: relative;
+      }
+
+      .bel {
+      	background-image:url('belarus.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      	float:left;
+      }
+
+      .rus {
+      	background-image:url('russia.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      	float:right;
+      }
+
+      .flag:after {
+          position: absolute;
+          top: 0px;
+          content:'';
+          height: 100px;
+          width: 150px;
+          background: inherit;
+      }
+      .bel:after {
+          right: 0;
+          transform-origin: top right;
+          transform: skewX(15deg);
+           z-index: -1;
+      }
+      .rus:after {
+          left: 0;
+          transform-origin: bottom right;
+          transform: skewX(15deg);
+           z-index: 2;
+      }
+
     }
   }
   &-footer {
@@ -299,13 +410,27 @@ html::-webkit-scrollbar-thumb:active {
     }
     img {
       margin: 0 3px;
+      @media(max-width:992px){
+        height:9px;
+      }
     }
+  }
+  @media(max-width:992px){
+    width:100vw;
+    position:absolute;
+    z-index:100;
+    height:100%;
+    top:0;
+    left:0;
+    bottom: 0;
+    transform:translateY(-100%);
+    transition:transform 0.2s;
   }
 }
 
 .content__right-footer {
   padding-bottom: 25px;
-  font-size: 16px;
+  @include adaptiv-font(16,5,1.2);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -351,7 +476,7 @@ html::-webkit-scrollbar-thumb:active {
   display: block;
   width: 267px;
   margin: 0 42px 55px;
-  font-size: 16px;
+  @include adaptiv-font(16,5,1.2);
   padding: 16px 19px 8px;
   background-color: #242425;
   box-shadow: 0px 4px 10px 5px #00000040;
@@ -391,4 +516,9 @@ html::-webkit-scrollbar-thumb:active {
 		color:black
 	 }
   }
+}
+
+
+.showMenu{
+  transform:translateY(0);
 }

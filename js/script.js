@@ -25,3 +25,17 @@ const recom=new Swiper('.recomendation__swiper',{
 	},
 	slidesPerView: 4,
 });
+
+var menuOpen=document.querySelectorAll(".header__ham");
+var contentLeft=document.querySelector(".content__left");
+
+menuOpen.forEach(function(button){
+	button.addEventListener("click", toggleMenu);
+	});
+
+function toggleMenu() {
+
+	  contentLeft.classList.toggle("showMenu");
+	
+ }
+
