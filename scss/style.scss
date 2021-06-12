@@ -8,8 +8,11 @@ $maxWidth: 1920;
 @mixin adaptiv-font($pcSize, $mobSize, $line) {
   $addSize: $pcSize - $mobSize;
   $addMobSize: $addSize + $addSize * 0.7;
-
-  @media (max-width: 767px) {
+  @media (max-width: 414px) {
+    font-size: #{$mobSize + px};
+    line-height: #{$mobSize + px}*#{$line};
+  }
+  @media (min-width: 415px) {
     font-size: calc(
       #{$mobSize + px} + #{$addMobSize} * ((100vw - 414px) / #{$maxWidth})
     );
@@ -22,7 +25,7 @@ $maxWidth: 1920;
     font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
     line-height: calc((#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}))) *#{$line};
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1920px) {
     font-size: #{$pcSize + px};
     line-height: #{$pcSize + px} *#{$line};
   }
