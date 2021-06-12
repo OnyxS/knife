@@ -5,16 +5,21 @@ const start=new Swiper('.start__swiper',{
 		clickable:true,
 		
 	},
+	initialSlide:1,
+	centeredSlides:true,
+	loop:true,
+	slidesPerView: 2,
+	autoplay:{
+		delay:1000,
+		desableOnInteraction:false,
+	},
+	speed:800,
 	effect:'coverflow',
 	coverflowEffect:{
-		rotate:20,
-		stretch:50,
+		rotate:5,
 		slideShadows:true,
-
-
+		stretch:100,
 	},
-	
-	slidesPerView: 3,
 });
 
 const recom=new Swiper('.recomendation__swiper',{
