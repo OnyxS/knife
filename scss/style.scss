@@ -145,10 +145,12 @@ html::-webkit-scrollbar-thumb:active {
     .start__swiper {
       padding-bottom: 50px;
       width: 70vw;
+      @media (max-width: 992px) {
+        width: 90vw;
+      }
       .swiper-slide {
         height: 30vw;
         background: #c4c4c4;
-        
       }
       .swiper-pagination {
         bottom: 0;
@@ -217,7 +219,6 @@ html::-webkit-scrollbar-thumb:active {
           .item__img {
             width: 100%;
             height: 12vw;
-            
           }
           .img1 {
             background: url(../img/knife1.png);
@@ -248,7 +249,7 @@ html::-webkit-scrollbar-thumb:active {
             padding: 5px 6px 3px;
             margin: 0 0 12px;
             width: 22%;
-            
+
             .item__name {
               margin: 8px 0 11px;
             }
@@ -473,7 +474,6 @@ html::-webkit-scrollbar-thumb:active {
     width: 26%;
   }
   &-center {
-    
     .content__right-footer-name {
       position: relative;
       &::before {
@@ -496,8 +496,8 @@ html::-webkit-scrollbar-thumb:active {
       }
     }
   }
-  &-pusto{
-    width:26%;
+  &-pusto {
+    width: 26%;
   }
 }
 

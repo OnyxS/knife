@@ -229,6 +229,12 @@ html::-webkit-scrollbar-thumb:active {
   width: 70vw;
 }
 
+@media (max-width: 992px) {
+  .content .content__right .start__swiper {
+    width: 90vw;
+  }
+}
+
 .content .content__right .start__swiper .swiper-slide {
   height: 30vw;
   background: #c4c4c4;
