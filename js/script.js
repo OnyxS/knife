@@ -29,6 +29,7 @@ const recom=new Swiper('.recomendation__swiper',{
 		
 	},
 	slidesPerView: 4,
+	slidesPerGroup:4,
 });
 
 var menuOpen=document.querySelectorAll(".header__ham");

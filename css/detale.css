@@ -26,6 +26,7 @@
 }
 
 .detale .detale__form-characters-img {
+  width: 40%;
   height: 100%;
 }
 
@@ -110,6 +111,27 @@
   padding-bottom: 70px;
   margin-bottom: 100px;
   width: 70vw;
+}
+
+@media (max-width: 992px) {
+  .detale .recomendation .swiper-container {
+    width: 90vw;
+  }
+}
+
+.detale .recomendation .swiper-container .katalog__row-item {
+  width: 75%;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .detale .recomendation .swiper-container .katalog__row-item {
+    margin: 0;
+  }
+}
+
+.detale .recomendation .swiper-container .katalog__row-item .item__img {
+  height: 8vw;
 }
 
 .detale .recomendation .swiper-container .swiper-pagination {

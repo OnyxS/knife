@@ -13,7 +13,8 @@
       display: flex;
       justify-content: space-between;
       &-img {
-        height: 100%;
+        width:40%;
+        height:100%;
       }
       &-table {
         width: 42.2%;
@@ -80,6 +81,19 @@
       padding-bottom: 70px;
       margin-bottom: 100px;
       width: 70vw;
+      @media(max-width:992px){
+        width:90vw;
+      }
+      .katalog__row-item{
+        width:75%;
+        margin:0;
+        @media(max-width:992px){
+          margin:0;
+        }
+        .item__img{
+          height:8vw;
+        }
+      }
       .swiper-pagination {
         bottom: 0;
         .swiper-pagination-bullet {

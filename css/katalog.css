@@ -1,0 +1,23 @@
+.katalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.katalog .content__right-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40%;
+}
+
+.katalog .content__right-row .katalog__row-item {
+  width: 20%;
+  margin: 0 25px 55px;
+}
