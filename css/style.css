@@ -254,7 +254,7 @@ html::-webkit-scrollbar-thumb:active {
 
 .content .content__right .start__swiper {
   padding-bottom: 50px;
-  width: 70vw;
+  width: 61vw;
 }
 
 @media (max-width: 992px) {

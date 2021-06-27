@@ -147,7 +147,7 @@ html::-webkit-scrollbar-thumb:active {
     }
     .start__swiper {
       padding-bottom: 50px;
-      width: 70vw;
+      width: 61vw;
       @media (max-width: 992px) {
         width: 90vw;
       }
@@ -518,8 +518,8 @@ html::-webkit-scrollbar-thumb:active {
 .content__right {
   width: 100%;
   background-color: #3e3e3e;
-  &-title{
-    margin:51px 0 50px 39px;
+  &-title {
+    margin: 51px 0 50px 39px;
   }
 }
 
