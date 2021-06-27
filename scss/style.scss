@@ -382,21 +382,32 @@ html::-webkit-scrollbar-thumb:active {
       .content__left-pay-title {
         padding-bottom: 86px;
         @media (max-width: 992px) {
-          padding: 0;
+          padding-bottom: 8px;
+          margin-top: 15px;
         }
       }
       .flags {
-        width: 300px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 27.5px;
+        @media (max-width: 992px) {
+          height: 15px;
+        }
       }
 
       .flag {
-        height: 100px;
-        width: 150px;
+        height: 38px;
+        width: 90px;
         position: relative;
+        @media (max-width: 992px) {
+          height: 15px;
+          width: 35px;
+        }
       }
 
       .bel {
-        background-image: url("belarus.svg");
+        background-image: url("../img/belarus.svg");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -404,20 +415,25 @@ html::-webkit-scrollbar-thumb:active {
       }
 
       .rus {
-        background-image: url("russia.svg");
+        background-image: url("../img/russia.svg");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
         float: right;
+        opacity: 0.25;
       }
 
       .flag:after {
         position: absolute;
         top: 0px;
         content: "";
-        height: 100px;
-        width: 150px;
+        height: 38px;
+        width: 90px;
         background: inherit;
+        @media (max-width: 992px) {
+          height: 15px;
+          width: 35px;
+        }
       }
       .bel:after {
         right: 0;
