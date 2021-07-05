@@ -24,6 +24,34 @@
   margin: 43px 0 54px;
 }
 
+@media (max-width: 414px) {
+  .order .content__right-order-title {
+    font-size: 18px;
+    line-height: 18px*1.2;
+  }
+}
+
+@media (min-width: 415px) {
+  .order .content__right-order-title {
+    font-size: calc( 18px + 51 * ((100vw - 414px) / 1920));
+    line-height: calc( (18px + 51 * ((100vw - 414px) / 1920)) *1.2);
+  }
+}
+
+@media (min-width: 767px) {
+  .order .content__right-order-title {
+    font-size: calc(18px + 30 * (100vw / 1920));
+    line-height: calc((18px + 30 * (100vw / 1920))) *1.2;
+  }
+}
+
+@media (min-width: 1920px) {
+  .order .content__right-order-title {
+    font-size: 48px;
+    line-height: 48px *1.2;
+  }
+}
+
 @media (max-width: 992px) {
   .order .content__right-order-title {
     margin: 27px 0 20px;
@@ -332,7 +360,7 @@
 
 .order .content__right-buy {
   margin-right: 20px;
-  margin-bottom: 20vw;
+  margin-bottom: 30vw;
   margin-top: 96px;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -40,6 +40,7 @@ $maxWidth: 1920;
   }
   .content__right-order-title {
     margin: 43px 0 54px;
+	 @include adaptiv-font(48,18,1.2);
     @media (max-width: 992px) {
       margin: 27px 0 20px;
     }
@@ -141,7 +142,7 @@ $maxWidth: 1920;
   }
   .content__right-buy {
     margin-right: 20px;
-    margin-bottom: 20vw;
+    margin-bottom: 30vw;
     margin-top: 96px;
     display: flex;
     justify-content: space-between;
