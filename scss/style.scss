@@ -35,7 +35,7 @@ html {
   box-sizing: border-box;
   font-family: "EFN";
   color: white;
-  @include adaptiv-font(14, 5, 1.2);
+  @include adaptiv-font(14, 7, 1.2);
   font-weight: 400;
   scroll-behavior: smooth;
   @media screen and (prefers-reduced-motion: reduce) {
@@ -55,11 +55,11 @@ body {
 }
 
 h2 {
-  @include adaptiv-font(36, 12, 1.2);
+  @include adaptiv-font(36, 14, 1.2);
 }
 
 h3 {
-  @include adaptiv-font(36, 12, 1.2);
+  @include adaptiv-font(36, 14, 1.2);
 }
 
 a {
@@ -99,7 +99,7 @@ html::-webkit-scrollbar-thumb:active {
 .container {
   padding: 0 45px;
   @media (max-width: 992px) {
-    padding: 0 18px;
+    padding: 0 15px;
   }
 }
 
@@ -198,7 +198,7 @@ html::-webkit-scrollbar-thumb:active {
       &__title {
         margin: 87px 0 55px;
         @media (max-width: 992px) {
-          margin: 42px 0 4px 13px;
+          margin: 10px 0 20px 13px;
         }
       }
       &__row {
@@ -207,21 +207,30 @@ html::-webkit-scrollbar-thumb:active {
         justify-content: center;
         margin-bottom: 245px;
         @media (max-width: 992px) {
-          margin-bottom: 136px;
-          justify-content: space-between;
+          display: none;
         }
         &-item {
           display: block;
-          width: 24%;
+          width: 21%;
           margin: 0 42px 55px;
-          @include adaptiv-font(16, 5, 1.2);
+          @include adaptiv-font(16, 7, 1.2);
           padding: 16px 19px 8px;
           background-color: #242425;
           box-shadow: 0px 4px 10px 5px #00000040;
           text-align: center;
+          @media (max-width: 2560px) {
+            width: 23%;
+          }
+          @media (max-width: 1200px) {
+            padding: 16px 13px 8px;
+            margin: 0 34px 55px;
+          }
           .item__img {
             width: 100%;
-            height: 12vw;
+            height: 11vw;
+            @media (max-width: 2560px) {
+              height: 9vw;
+            }
           }
           .img1 {
             background: url(../img/knife1.png);
@@ -263,6 +272,58 @@ html::-webkit-scrollbar-thumb:active {
               padding: 4px;
             }
           }
+        }
+      }
+      &__slider {
+        display: none;
+        padding-bottom: 100px;
+        .katalog__row-item {
+          width: 90%;
+          padding: 11px 6px 5px;
+          @media (max-width: 767px) {
+            padding: 11px 10px 5px;
+          }
+          @media (max-width: 576px) {
+            width: 87%;
+          }
+          .item__img {
+            height: 10vw;
+            @media (max-width: 767px) {
+              height: 15vw;
+            }
+            @media (max-width: 576px) {
+              height: 24vw;
+            }
+          }
+          .item__name {
+            margin: 19px 0;
+          }
+          .item__price {
+            margin-bottom: 34px;
+          }
+          .item__btn {
+            width: 90%;
+          }
+        }
+        .swiper-pagination {
+          bottom: 80px;
+          .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            &-active {
+              background-color: white;
+            }
+            @media (max-width: 992px) {
+              width: 5px;
+              height: 5px;
+              border: 1px solid white;
+              margin: 0 0.5px;
+            }
+          }
+        }
+        @media (max-width: 992px) {
+          display: block;
         }
       }
     }
@@ -380,7 +441,7 @@ html::-webkit-scrollbar-thumb:active {
   .content__left-bottom {
     &-pay {
       .content__left-pay-title {
-        padding-bottom: 86px;
+        padding-bottom: 20.5px;
         @media (max-width: 992px) {
           padding-bottom: 8px;
           margin-top: 15px;
@@ -397,8 +458,6 @@ html::-webkit-scrollbar-thumb:active {
       }
 
       .flag {
-        height: 38px;
-        width: 90px;
         position: relative;
         @media (max-width: 992px) {
           height: 15px;
@@ -428,7 +487,7 @@ html::-webkit-scrollbar-thumb:active {
         top: 0px;
         content: "";
         height: 38px;
-        width: 90px;
+        width: 88px;
         background: inherit;
         @media (max-width: 992px) {
           height: 15px;
@@ -439,13 +498,14 @@ html::-webkit-scrollbar-thumb:active {
         right: 0;
         transform-origin: top right;
         transform: skewX(15deg);
-        z-index: -1;
+        z-index: 0;
+        margin-right: 10px;
       }
       .rus:after {
         left: 0;
         transform-origin: bottom right;
         transform: skewX(15deg);
-        z-index: 2;
+        z-index: 0;
       }
     }
   }
@@ -541,9 +601,9 @@ html::-webkit-scrollbar-thumb:active {
 
 .katalog__row-item {
   display: block;
-  width: 24%;
+  width: 21%;
   margin: 0 42px 55px;
-  @include adaptiv-font(16, 5, 1.2);
+  @include adaptiv-font(16, 9, 1.2);
   padding: 16px 19px 8px;
   background-color: #242425;
   box-shadow: 0px 4px 10px 5px #00000040;
@@ -555,7 +615,7 @@ html::-webkit-scrollbar-thumb:active {
   }
   .item__img {
     width: 100%;
-    height: 12vw;
+    height: 11vw;
   }
   .img1 {
     background: url(../img/knife1.png);
