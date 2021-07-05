@@ -49,15 +49,6 @@ const start=new Swiper('.start__swiper',{
 	},
 });
 
-const recom=new Swiper('.recomendation__swiper',{
-	pagination:{
-		el:'.swiper-pagination',
-		clickable:true,
-		
-	},
-	slidesPerView: 4,
-	slidesPerGroup:4,
-});
 
 
 

@@ -398,7 +398,7 @@ html::-webkit-scrollbar-thumb:active {
 @media (max-width: 1200px) {
   .content .content__right .katalog__row-item {
     padding: 16px 13px 8px;
-    margin: 0 34px 55px;
+    margin: 0 34px 20px;
   }
 }
 
@@ -1004,7 +1004,7 @@ html::-webkit-scrollbar-thumb:active {
 .katalog__row-item {
   display: block;
   width: 21%;
-  margin: 0 42px 55px;
+  margin: 0 42px 20px;
   padding: 16px 19px 8px;
   background-color: #242425;
   -webkit-box-shadow: 0px 4px 10px 5px #00000040;
@@ -1037,6 +1037,12 @@ html::-webkit-scrollbar-thumb:active {
   .katalog__row-item {
     font-size: 16px;
     line-height: 16px *1.2;
+  }
+}
+
+@media (max-width: 576px) {
+  .katalog__row-item {
+    padding: 11px 13px 5px;
   }
 }
 

@@ -1,0 +1,30 @@
+.order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.order .content__right-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.order .content__right-all .content__right-title {
+  margin: 0;
+}
+
+.order .content__right-all .all__left-title {
+  font-size: 36px;
+  margin-bottom: 74px;
+}
+
+.order .content__right-all .all__left-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}

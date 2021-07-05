@@ -1,0 +1,49 @@
+
+$maxWidth: 1920;
+
+@mixin adaptiv-font($pcSize, $mobSize, $line) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  @media (max-width: 414px) {
+    font-size: #{$mobSize + px};
+    line-height: #{$mobSize + px}*#{$line};
+  }
+  @media (min-width: 415px) {
+    font-size: calc(
+      #{$mobSize + px} + #{$addMobSize} * ((100vw - 414px) / #{$maxWidth})
+    );
+    line-height: calc(
+      (#{$mobSize + px} + #{$addMobSize} * ((100vw - 414px) / #{$maxWidth})) *#{$line}
+    );
+  }
+
+  @media (min-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    line-height: calc((#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}))) *#{$line};
+  }
+  @media (min-width: 1920px) {
+    font-size: #{$pcSize + px};
+    line-height: #{$pcSize + px} *#{$line};
+  }
+}
+
+.order{
+	display: flex;
+	.content__right-all{
+		display: flex;
+		.content__right-title{
+			margin: 0;
+		}
+		.all__left{
+			&-title{
+				font-size: 36px;
+				margin-bottom: 74px;
+			}
+			&-inputs{
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		
+	}
+}
