@@ -714,12 +714,19 @@ html::-webkit-scrollbar-thumb:active {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 .content__left-contact img {
   width: 25px;
-  margin: 0 auto 20px;
+  margin: 0 auto 12px;
 }
 
 @media (max-width: 992px) {
@@ -741,7 +748,7 @@ html::-webkit-scrollbar-thumb:active {
 
 @media (max-width: 992px) {
   .content__left-contact .content__contact-tel {
-    margin: 0;
+    margin: 130px 0 0;
     width: 107px;
   }
 }
@@ -754,7 +761,7 @@ html::-webkit-scrollbar-thumb:active {
 @media (max-width: 992px) {
   .content__left-contact .content__contact-adress {
     width: 107px;
-    margin: 0;
+    margin: 37px 0 52px;
   }
 }
 
